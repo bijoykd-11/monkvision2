@@ -13,8 +13,8 @@
 
 <body style = "text-align:center;"> 
     
-    <h1 style = "color:green;"> 
-        Find your favourite tracks here 
+    <h1 style = "color:blue;"> 
+        Find your favourite artists here 
     </h1> 
     
     <p id = "GFG_UP" style = 
@@ -33,13 +33,13 @@
         var el_up = document.getElementById("GFG_UP"); 
         
         var list = [ 
-            {"song":"dark house", "artist":"katy perry", "ft.":"juicy j"}, 
-            {"song":"chandeliar", "artist":"sia", "ft.":"sia"}, 
-            {"song":"work from home", "artist":"fifth harmony", "ft.":"ty dolla"} 
+            {"theme":"nature", "artist":"ashish blesson", "ft.":"prarushi"}, 
+            {"theme":"wildlife", "artist":"abhishek", "ft.":"harpreet"}, 
+            {"theme":"stills", "artist":"sharon", "ft.":"ban steve"} 
         ]; 
         
         el_up.innerHTML = "here is the table list " 
-                + "of musical tracks for you.<br><br>" 
+                + "of available artists for you.<br><br>" 
                 + JSON.stringify(list[0]) + "<br>" 
                 + JSON.stringify(list[1]) + "<br>" 
                 + JSON.stringify(list[2]); 
