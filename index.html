@@ -34,6 +34,7 @@
 	<link rel="shortcut icon" href="logomonk.png">
 	
 	
+	
 </head>
 <body class="royal_loader">	
 	<!-- Primary Page Layout
@@ -597,36 +598,53 @@
 							<p><strong>5GB</strong> STORAGE</p>
 							<p>UNLIMITED clicks</p>
 							<div class="cl-effect-5">
-<button type="button" onclick="loadDoc()">know more</button>
-<br><br>
-<table id="demo"></table>
+<input type="button" onclick="previous()" value="<<">
+<input type="button" onclick="next()" value=">>">
 
 <script>
-function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
+var i = 0, len;
+display(i);
+
+function display(i) {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      myFunction(this);
+      myFunction(this, i);
     }
   };
-  xhttp.open("GET", "dom.xml", true);
-  xhttp.send();
+  xmlhttp.open("GET", "dom.xml", true);
+  xmlhttp.send();
 }
-function myFunction(xml) {
-  var i;
-  var xmlDoc = xml.responseXML;
-  var table="<tr><th>Artist</th><th>Title</th></tr>";
-  var x = xmlDoc.getElementsByTagName("CATALOG");
-  for (i = 0; i <x.length; i++) { 
-    table += "<tr><td>" +
-    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
-    "</td><td>" +
-    x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
-    "</td></tr>";
+
+function myFunction(xml, i) {
+  var xmlDoc = xml.responseXML; 
+  x = xmlDoc.getElementsByTagName("PIC");
+  len = x.length;
+  document.getElementById("showPIC").innerHTML =
+  "Artist: " +
+  x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+  "<br>Title: " +
+  x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+  "<br>Year: " + 
+  x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue;
+}
+
+function next() {
+  if (i < len-1) {
+    i++;
+    display(i);
   }
-  document.getElementById("demo").innerHTML = table;
+}
+
+function previous() {
+  if (i > 0) {
+    i--;
+    display(i);
+  }
 }
 </script>
+
+
 
 							</div>
 						</div>
@@ -640,36 +658,53 @@ function myFunction(xml) {
 							<p><strong>25</strong> PROJECTS</p>
 							<p><strong>15GB</strong> STORAGE</p>
 							<p>UNLIMITED clicks</p>
-							<div class="cl-effect-5"><button type="button" onclick="loadDoc()">know more</button>
-<br><br>
-<table id="demo"></table>
+							<div class="cl-effect-5">
+								<input type="button" onclick="previous()" value="<<">
+<input type="button" onclick="next()" value=">>">
 
 <script>
-function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
+var i = 0, len;
+display(i);
+
+function display(i) {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      myFunction(this);
+      myFunction(this, i);
     }
   };
-  xhttp.open("GET", "dom.xml", true);
-  xhttp.send();
+  xmlhttp.open("GET", "dom.xml", true);
+  xmlhttp.send();
 }
-function myFunction(xml) {
-  var i;
-  var xmlDoc = xml.responseXML;
-  var table="<tr><th>Artist</th><th>Title</th></tr>";
-  var x = xmlDoc.getElementsByTagName("CATALOG");
-  for (i = 0; i <x.length; i++) { 
-    table += "<tr><td>" +
-    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
-    "</td><td>" +
-    x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
-    "</td></tr>";
+
+function myFunction(xml, i) {
+  var xmlDoc = xml.responseXML; 
+  x = xmlDoc.getElementsByTagName("PIC");
+  len = x.length;
+  document.getElementById("showPIC").innerHTML =
+  "Artist: " +
+  x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+  "<br>Title: " +
+  x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+  "<br>Year: " + 
+  x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue;
+}
+
+function next() {
+  if (i < len-1) {
+    i++;
+    display(i);
   }
-  document.getElementById("demo").innerHTML = table;
 }
-</script></div>
+
+function previous() {
+  if (i > 0) {
+    i--;
+    display(i);
+  }
+}
+</script>
+</div>
 						</div>
 					</div>
 					<div class="one-third column" data-scrollreveal="enter right and move 150px over 1s">
@@ -681,36 +716,53 @@ function myFunction(xml) {
 							<p><strong>100</strong> PROJECTS</p>
 							<p><strong>50GB</strong> STORAGE</p>
 							<p>UNLIMITED clicks</p>
-							<div class="cl-effect-5"><button type="button" onclick="loadDoc()">know more</button>
-<br><br>
-<table id="demo"></table>
+							<div class="cl-effect-5">
+								<input type="button" onclick="previous()" value="<<">
+<input type="button" onclick="next()" value=">>">
 
 <script>
-function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
+var i = 0, len;
+display(i);
+
+function display(i) {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      myFunction(this);
+      myFunction(this, i);
     }
   };
-  xhttp.open("GET", "dom.xml", true);
-  xhttp.send();
+  xmlhttp.open("GET", "dom.xml", true);
+  xmlhttp.send();
 }
-function myFunction(xml) {
-  var i;
-  var xmlDoc = xml.responseXML;
-  var table="<tr><th>Artist</th><th>Title</th></tr>";
-  var x = xmlDoc.getElementsByTagName("CATALOG");
-  for (i = 0; i <x.length; i++) { 
-    table += "<tr><td>" +
-    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
-    "</td><td>" +
-    x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
-    "</td></tr>";
+
+function myFunction(xml, i) {
+  var xmlDoc = xml.responseXML; 
+  x = xmlDoc.getElementsByTagName("PIC");
+  len = x.length;
+  document.getElementById("showPIC").innerHTML =
+  "Artist: " +
+  x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+  "<br>Title: " +
+  x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+  "<br>Year: " + 
+  x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue;
+}
+
+function next() {
+  if (i < len-1) {
+    i++;
+    display(i);
   }
-  document.getElementById("demo").innerHTML = table;
 }
-</script></div>
+
+function previous() {
+  if (i > 0) {
+    i--;
+    display(i);
+  }
+}
+</script>
+</div>
 						</div>
 					</div>
 				</div>	
