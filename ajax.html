@@ -3,7 +3,7 @@
 
 <head> 
     <title> 
-    musitracks 
+    Artist lists
     </title> 
     
     <script src= 
@@ -22,27 +22,35 @@
     </p> 
     
     <button onclick = "GFG_FUN()"> 
-        table of tracks 
+        click to know artists 
     </button> 
     
     <br><br> 
     
-    <table id="table" align = "center" border="1px"></table> 
+    <table id="table" align = "center" border="2px"></table> 
     
     <script> 
         var el_up = document.getElementById("GFG_UP"); 
         
         var list = [ 
-            {"theme":"nature", "artist":"ashish blesson", "ft.":"prarushi"}, 
-            {"theme":"wildlife", "artist":"abhishek", "ft.":"harpreet"}, 
-            {"theme":"stills", "artist":"sharon", "ft.":"ban steve"} 
+            {"theme":"Nature", "artist":"Ashish Blesson", "Clicks":"4251"}, 
+            {"theme":"Wildlife", "artist":"Abhishek", "Clicks":"1458"}, 
+            {"theme":"Stills", "artist":"Sharon", "Clicks":"1412"},
+            {"theme":"Dawns", "artist":"Prarushi", "Clicks":"1000"} ,
+            {"theme":"Streets", "artist":"Renoy", "Clicks":"801"} ,
+            {"theme":"Historical", "artist":"Sijo", "Clicks":"401"},
+            {"theme":"Pre-Wedding", "artist":"Umang", "Clicks":"200"}  
         ]; 
         
         el_up.innerHTML = "here is the table list " 
                 + "of available artists for you.<br><br>" 
                 + JSON.stringify(list[0]) + "<br>" 
                 + JSON.stringify(list[1]) + "<br>" 
-                + JSON.stringify(list[2]); 
+                + JSON.stringify(list[2]) + "<br>" 
+                + JSON.stringify(list[3]) + "<br>" 
+                + JSON.stringify(list[4]) + "<br>" 
+                + JSON.stringify(list[5]) + "<br>" 
+                + JSON.stringify(list[6]); 
         
         function GFG_FUN() { 
             var cols = []; 
